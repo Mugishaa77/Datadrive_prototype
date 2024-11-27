@@ -147,3 +147,10 @@ flex: 1;
 }
 
 
+/* Vehicle Table */
+
+/* Deliveries */
+.delivery-banner {
+display : flex;
+flex-direction: row;
+}

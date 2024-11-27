@@ -1,7 +1,7 @@
 import React from "react";
 import { Badge, Progress, Typography } from "antd";
 import { CarOutlined, InboxOutlined } from "@ant-design/icons"; // Using valid icons
-import ActivityChart from "./ActivityChart";
+import ActivityChart from "../components/ActivityChart";
 
 const { Text } = Typography;
 

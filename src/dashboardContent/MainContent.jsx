@@ -1,8 +1,8 @@
 import { Flex } from 'antd';
 import React from 'react';
 import Banner from './Banner';
-import ProductLists from './ProductLists';
-import SellerLists from './SellerLists';
+import ProductLists from '../components/ProductLists';
+import SellerLists from '../components/SellerLists';
 
 export default function MainContent () {
     return (

@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography } from "antd";
 
 const VehicleInfoTable = () => {
   // Sample data for the table
@@ -50,30 +51,42 @@ const VehicleInfoTable = () => {
 
   return (
     <div>
-      <h2>Vehicle Information Table</h2>
-      <table border="1" style={{ width: "100%", borderCollapse: "collapse" }}>
-        <thead>
-          <tr>
-            <th>Vehicle ID</th>
-            <th>Vehicle Type</th>
-            <th>Fuel Consumption</th>
-            <th>Total Trips Made</th>
-            <th>Last Serviced</th>
+    <Typography.Title level={2} strong  className="primary--color" style={{paddingTop:"1rem"}}>
+    Vehicle Information Table
+                    </Typography.Title>
+    <table
+      border="1"
+      style={{
+        width: "100%",
+        borderCollapse: "collapse",
+        backgroundColor: "white",
+        borderRadius: "5px",
+        overflow: "hidden",
+      }}
+    >
+      <thead>
+        <tr>
+          <th style={{ padding: "8px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize: "18px" }}>Vehicle ID</th>
+          <th style={{ padding: "8px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize: "18px" }}>Vehicle Type</th>
+          <th style={{ padding: "8px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize: "18px" }}>Fuel Consumption</th>
+          <th style={{ padding: "8px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize: "18px" }}>Total Trips Made</th>
+          <th style={{ padding: "8px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize: "18px" }}>Last Serviced</th>
+        </tr>
+      </thead>
+      <tbody>
+        {vehicleData.map((vehicle, index) => (
+          <tr key={index} style={{ textAlign: "center", color: "black" }}>
+            <td style={{ padding: "8px", margin: "3px" }}>{vehicle.VehicleID}</td>
+            <td style={{ padding: "8px", margin: "3px" }}>{vehicle.VehicleType}</td>
+            <td style={{ padding: "8px", margin: "3px" }}>{vehicle.FuelConsumption}</td>
+            <td style={{ padding: "8px", margin: "3px" }}>{vehicle.TotalTrips}</td>
+            <td style={{ padding: "8px", margin: "3px" }}>{vehicle.LastServiced}</td>
           </tr>
-        </thead>
-        <tbody>
-          {vehicleData.map((vehicle, index) => (
-            <tr key={index}>
-              <td>{vehicle.VehicleID}</td>
-              <td>{vehicle.VehicleType}</td>
-              <td>{vehicle.FuelConsumption}</td>
-              <td>{vehicle.TotalTrips}</td>
-              <td>{vehicle.LastServiced}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography } from "antd";
 
 const VehicleTable = () => {
   // Sample data
@@ -78,31 +79,47 @@ const VehicleTable = () => {
 
   return (
     <div>
-      <h2>Vehicle Status Table</h2>
-      <table border="1" style={{ width: "100%", borderCollapse: "collapse" }}>
-        <thead>
-          <tr>
-            <th>Vehicle ID</th>
-            <th>Driver</th>
-            <th>Pickup Point</th>
-            <th>Drop Off</th>
-            <th>Estimated Time of Arrival</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.map((row, index) => (
-            <tr key={index}>
-              <td>{row.VehicleID}</td>
-              <td>{row.Driver}</td>
-              <td>{row.Pickup}</td>
-              <td>{row.DropOff}</td>
-              <td>{row.ETA}</td>
-              <td style={getStatusStyle(row.Status)}>{row.Status}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+       <Typography.Title level={2} strong  className="primary--color" style={{paddingTop:"1rem"}}>
+       Vehicle Status Table
+                    </Typography.Title>
+                    <table
+  border="1"
+  style={{
+    width: "100%",
+    borderCollapse: "collapse",
+    backgroundColor: "white",
+    borderRadius: "5px",
+    overflow: "hidden",
+  }}
+>
+  <thead>
+    <tr>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize:"20px" }}>Vehicle ID</th>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize:"20px" }}>Driver</th>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize:"20px" }}>Pickup Point</th>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize:"20px" }}>Drop Off</th>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62", fontSize:"20px" }}>
+        ETA
+      </th>
+      <th style={{ padding: "3px", margin: "3px", textAlign: "center", color: "#00BF62" , fontSize:"20px"}}>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {tableData.map((row, index) => (
+      <tr key={index} style={{ color: "black" }}>
+        <td style={{ padding: "3px", margin: "3px", textAlign: "center" }}>{row.VehicleID}</td>
+        <td style={{ padding: "3px", margin: "3px", textAlign: "center" }}>{row.Driver}</td>
+        <td style={{ padding: "3px", margin: "3px", textAlign: "center" }}>{row.Pickup}</td>
+        <td style={{ padding: "3px", margin: "3px", textAlign: "center" }}>{row.DropOff}</td>
+        <td style={{ padding: "3px", margin: "3px", textAlign: "center" }}>{row.ETA}</td>
+        <td style={{ ...getStatusStyle(row.Status), padding: "3px", margin: "3px", textAlign: "center" }}>
+          {row.Status}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
     </div>
   );
 };

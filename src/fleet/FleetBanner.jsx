@@ -4,7 +4,7 @@ export default function FleetBanner () {
     return (
        <div className="fleet-banner">
         <Card>
-        <Typography.Title level={2} strong>
+        <Typography.Title level={2} strong className="primary--color">
                         Fleet Management
                     </Typography.Title>
                     <Button type="primary" size="large">

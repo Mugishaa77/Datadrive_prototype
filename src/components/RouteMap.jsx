@@ -63,10 +63,10 @@ const RouteMap = () => {
     }, []);
 
     return (
-        <div>
+        <div  style={{width:"100%"}} >
             <div
                 ref={mapContainer}
-                style={{ width: "100%", height: "500px" }}
+                style={{ maxWidth: "100%", height: "500px", padding: "1rem" }}
             />
         </div>
     );

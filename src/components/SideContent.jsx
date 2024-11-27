@@ -1,6 +1,6 @@
 import {Flex} from 'antd';
-import ContentSidebar from './ContentSidebar';
-import Activity from './Activity';
+import ContentSidebar from '../dashboardContent/ContentSidebar';
+import Activity from '../dashboardContent/Activity';
 
 
 export default function SideContent () {

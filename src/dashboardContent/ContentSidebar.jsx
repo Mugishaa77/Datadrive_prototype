@@ -7,11 +7,11 @@ export default function ContentSidebar() {
         <div>
             <Card className="card" style={{textAlign:'center'}}>
                 <Flex vertical gap="medium">
-                    <Typography.Title level={4} strong>
+                    <Typography.Title level={4} strong style={{color:"#0DBD6A"}}>
                         Carbon Reduced Today: <br />
                         <span ><strong>42</strong> kg</span>
                     </Typography.Title>
-                    <Typography.Title level={4} strong>
+                    <Typography.Title level={4} strong className="primary--color">
                         Carbon Reduced This Month: <br />
                         <span >1200 kg</span>
                     </Typography.Title>

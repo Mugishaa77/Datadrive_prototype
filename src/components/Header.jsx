@@ -6,8 +6,8 @@ import {MessageOutlined, NotificationOutlined, UserOutlined} from '@ant-design/i
 export default function CustomHeader () {
     return (
        <Flex align="center" justify="space-between" >
-       < Typography.Title level={3} type="secondary">
-         Welcome back :)
+       < Typography.Title level={2} type="secondary" style={{color: '#0DBD6A'}}>
+         Welcome back
        </ Typography.Title>
 
        <Flex align="center" gap="3rem">

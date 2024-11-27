@@ -19,8 +19,8 @@ const data = [
 ];
 export default function Activity () {
  return (
-    <div>
-        <Flex vertical gap="small">
+    <div style={{ margin:"1rem"}}>
+      
             <Flex align="center" justify="space-between" gap="large">
                 <Typography.Title level={3} strong className="primary--color">
                     Recent Activity
@@ -35,11 +35,12 @@ export default function Activity () {
              pagination 
              dataSource={data}
              renderItem={(user,index) => (
-                <List.Item>
+                <List.Item className="primary--color">
                     <List.Item.Meta
                      avatar = {<Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`}/>}
                       title={<a href="#">{user.name}</a>}
-                      description="Completed Trip ">
+                      description="Completed Trip "
+                      className="primary--color">
                     {user.data}
                     </List.Item.Meta>
                     <span className="gray--color">
@@ -48,7 +49,7 @@ export default function Activity () {
                 </List.Item>
              )}/>
 
-        </Flex>
+      
     </div>
  );
 }

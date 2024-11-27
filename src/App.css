@@ -129,6 +129,10 @@ flex: 1;
   background-image: linear-gradient(to bottom, lightgreen, white);
 }
 /* Banner */
+.banner {
+  margin: 1rem;
+  margin-top: 0;
+}
 .banner ul {
   display: flex;
   flex-direction: row;
@@ -146,6 +150,19 @@ flex: 1;
   text-align: center; /* Centers text content */
 }
 
+/* Dashboard  */
+.dashboard {
+  display: flex;
+  width: 100%;
+}
+
+.dashboard-one {
+  flex: 1;
+}
+
+.dashboard-two {
+  flex:1;
+}
 
 /* Vehicle Table */
 

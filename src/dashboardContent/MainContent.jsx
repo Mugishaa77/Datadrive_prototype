@@ -1,18 +1,21 @@
-import { Flex } from 'antd';
 import React from 'react';
 import Banner from './Banner';
-import ProductLists from '../components/ProductLists';
-import SellerLists from '../components/SellerLists';
+import RouteMap from './../components/RouteMap'
+import FleetOverview from './FleetOverview';
+
 
 export default function MainContent () {
     return (
         <div>
-            <div style={{flex:1} }>
-                <Flex vertical gap ="2.3rem">
+            <div >
                     <Banner/>
-                    <ProductLists/>
-                    <SellerLists/>
-                </Flex>
+                    <RouteMap/>
+                    <FleetOverview/>
+
+
+                    
+                
+               
 
             </div>
         </div>

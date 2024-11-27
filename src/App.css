@@ -157,11 +157,12 @@ flex: 1;
 }
 
 .dashboard-one {
-  flex: 1;
+  flex: 3;
 }
 
 .dashboard-two {
-  flex:1;
+  flex:2;
+  max-width: max-content;
 }
 
 /* Vehicle Table */

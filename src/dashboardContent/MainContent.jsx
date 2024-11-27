@@ -11,12 +11,6 @@ export default function MainContent () {
                     <Banner/>
                     <RouteMap/>
                     <FleetOverview/>
-
-
-                    
-                
-               
-
             </div>
         </div>
     );

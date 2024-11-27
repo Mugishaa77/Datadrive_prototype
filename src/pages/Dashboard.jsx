@@ -3,7 +3,7 @@ import SideContent from "../components/SideContent";
 
 export default function Dashboard () {
     return (
-        <div className="dashboard ">
+        <div className="dashboard" style={{width:"100%"}}>
         <div className="dashboard-one ">
             <MainContent/>
         </div>

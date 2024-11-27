@@ -44,14 +44,14 @@ return (
       <CustomHeader/>
     </Header>
     <Content className="content">
-      <Flex gap="large">
+
       <Routes>
                 {/* Define routes here */}
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/delivery" element={<Deliveries />} />
                 <Route path="/fleet" element={<Fleet />} />
                 </Routes>
-      </Flex>
+    
     </Content>
     </Layout>
 
